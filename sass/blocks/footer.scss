@@ -1,15 +1,179 @@
-//NAME SECTION
+//FOOTER / CONTACTS
+
+.footer__container {
+	position: relative;
+	overflow: hidden;
+	&:before {
+		content: '';
+		position: absolute;
+		left: 0;
+		bottom: 100px;
+		background: url('../img/car__footer.png') no-repeat;
+		width: 310px;
+		height: 320px;
+	}
+}
+
+.contacts__wrap {
+	display: flex;
+	flex-direction: row;
+}
+
+.padding-footer {
+	margin-top: 80px;
+	margin-bottom: 0;
+}
+
+/*Contacts*/
+
+.contacts__info {
+	display: flex;
+	flex-direction: column;
+	// width: 480px;
+	margin-right: 80px;
+}
+
+.contacts__info-box {
+	display: flex;
+	flex-direction: row;
+}
+
+.info__block {
+	display: flex;
+	flex-direction: column;
+	margin: 15px;
+}
+
+.info__1 {
+	margin-left: 0;
+}
+
+.info__address,
+.info__mail,
+.info__phone,
+.info__time {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	margin: 5px;
+	img {
+		margin-right: 10px;
+	}
+}
 
 
-/*Name block*/
+.info__phone {
+	font-size: 22px;
+	font-weight: 700;
+	width: 230px;
+	img {
+		height: 24px;
+	}
+}
+
+.info__address {
+	img {
+		height: 22px;
+	}
+}
+
+.info__mail {
+	img {
+		height: 14px;
+	}
+}
+
+.info__time {
+	img {
+		height: 18px;
+	}
+}
+
+.contacts__btns {
+	margin-bottom: 30px;
+}
+
+.footer__btn1 {
+	border-color: #F5D1BC;
+	box-shadow: none !important;
+}
+
+.footer__btn2 {
+	color: $orange;
+	box-shadow: none !important;
+}
+
+.contacts__social {
+	margin-bottom: 60px;
+	a {
+		margin: 5px;
+	}
+}
+
+/*-----------*/
+
+
+/*Map*/
+
+.contacts__block {
+	position: relative;
+}
+
+.map__container {
+	position: absolute;
+	box-sizing: border-box;
+	overflow: hidden;
+	top: 0;
+	left: 0;
+	width: 1000px;
+	height: 470px;
+	border-top: 15px solid #F1F0F5;
+	border-left: 15px solid #F1F0F5;
+	border-top-left-radius: 50px;
+}
 
 
 /*-----------*/
 
 
-/*Name block*/
+/*Footer*/
 
+footer {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
 
+.footer__info {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	margin-top: 15px;
+	margin-bottom: 15px;
+	p {
+		font-size: 12px;
+	}
+	span {
+		font-size: 12px;
+		margin-right: 25px;
+	}
+}
+
+.footer-line {
+	position: relative;
+	width: 100%;
+	height: 1px;
+	background: red;
+}
+
+.f-line {
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 900px;
+	height: 1px;
+	background: #E9E8EC;
+}
 
 /*-----------*/
 

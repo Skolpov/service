@@ -1,0 +1,88 @@
+//ABOUT US 
+
+.aboutus__wrap {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.aboutus__wrap .h2__title h2 {
+	text-align: center;
+	margin-bottom: 30px;
+}
+
+.aboutus__container {
+	display: flex;
+	flex-direction: row;
+}
+
+.aboutus__block {
+	display: flex;
+	flex-direction: column;
+	width: 560px;
+	margin: 20px;
+}
+
+/*left block*/
+
+.year-work {
+	margin-bottom: 10px;
+	p {
+		font-family: Montserrat, Roboto;
+		color: $orange;
+		font-weight: 900;
+		font-size: 20px;
+		line-height: 1;
+		span {
+			font-size: 81px;
+			font-weight: 900;
+		}
+	}
+}
+
+.recomendation-work {
+	margin-bottom: 40px;
+	color: $white;
+	font-weight: 500;
+	p {
+		font-size: 18px;
+	}
+}
+
+.our-quote {
+	display: flex;
+	flex-direction: row;
+	align-items: flex-start;
+	p {
+		font-size: 22px;
+		font-weight: 500;
+		color: $white;
+	}
+}
+
+/*-----------*/
+
+
+/*Right block*/
+
+.advantage {
+	display: flex;
+	flex-direction: row;
+	align-items: flex-start;
+	color: $color-text;
+	margin-bottom: 15px;
+	img {
+		margin-right: 15px;
+	}
+}
+
+.aboutus__btn {
+	margin-top: 25px;
+}
+
+/*-----------*/
+
+
+// SECTION END ==========
+
+

@@ -2,7 +2,8 @@
 
 .content {
 	background-image: url('../img/main-bg.jpg');
-	height: 2960px;
+	background-size: cover;
+	overflow: hidden;
 }
 
 
@@ -15,9 +16,13 @@
 	padding-bottom: 10px !important;
 	.main-logo {
 		img {
-			width: 140px;
-			padding-top: 10px;
+			width: 100px;
+			padding-top: 16px;
 		}
+	}
+	@include bp-640 {
+		padding-top: 5px !important;
+		padding-bottom: 5px !important;
 	}
 
 }
@@ -44,16 +49,15 @@
 /*Logo*/
 
 .main-logo {
-	@include bp-1200 {
-		img {
+	img {
+		height: auto;
+		@include bp-1200 {
 			width: 140px;
 			padding-top: 13px;
 		}
-	}
-	@include bp-1200 {
-		img {
-			width: 100px;
-			padding-top: 16px;
+		@include bp-480 {
+			width: 90px;
+			padding-top: 13px;
 		}
 	}
 }
@@ -147,11 +151,6 @@
 
 
 
-
-.main-container {
-	margin-bottom: 500px;
-}
-
 button {
 	@include button($btn, $btn);
 }
@@ -159,7 +158,7 @@ button {
 input[type="text"],
 input[type="email"],
 input[type="tel"] {
-	@include input($white, #CED4DA);
+	@include input($white, $white);
 }
 
 

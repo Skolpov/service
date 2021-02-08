@@ -1,0 +1,184 @@
+//SERVICES
+
+.services__container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.service__card {
+	position: relative;
+	display: flex;
+	margin: 15px;
+	transition: 0.3s ease-in-out;
+	border-radius: 10px;
+	background-color: $card;
+	&:first-child {
+		margin-left: 0;
+	}
+	&:last-child {
+		margin-right: 0;
+	}
+	&:hover {
+		background-color: $hover;
+		cursor: pointer;
+	}
+	a {
+		display: block;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+	}
+}
+
+/*-----------*/
+
+
+
+
+/*Big cards*/
+
+.big-card__container {
+	display: flex;
+	flex-direction: row;
+}
+
+.card--big {
+	flex-direction: column;
+	width: 370px;
+	height: 200px;
+	padding: 20px;
+	border-radius: 10px;
+	box-sizing: border-box;
+}
+
+.card__img {
+	position: relative;
+	height: 70px;
+	width: 100%;
+	img {
+		display:block;
+		position: absolute;
+		bottom: -15px;
+		left:0;
+		right:0;
+		margin: 0 auto;
+	}
+}
+
+.card__name {
+	h4 {
+		color: $white;
+		font-size: 20px;
+	}
+	p {
+		color: #CEC2FF;
+		span {
+			color: $orange;
+			margin-right: 10px;
+			font-size: 20px;
+		}
+	}
+}
+
+.card__price {
+	p {
+		color: $orange;
+		font-size: 26px;
+		font-weight: 700;
+		text-align: right;
+	}
+}
+
+/*-----------*/
+
+
+
+
+/*Small cards*/
+
+.small-card__container {
+	display: flex;
+	flex-direction: row;
+}
+
+.card--small {
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	width: 270px;
+	padding: 30px 20px;
+	
+}
+
+.small-card__name {
+	p {
+		color: $white;
+		font-size: 18px;
+		text-transform: uppercase;
+		font-weight: 700;
+	}
+}
+
+.small-card__btn {
+	position: relative;
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	background-color: #503F97;
+	img {
+		position: absolute;
+		display: block;
+		top: 2px;
+		left: 2px;
+		right: 0;
+		bottom: 0;
+		margin: auto;
+		width: 8px;
+	}
+}
+
+.more__cards {
+	display: none;
+}
+
+.display {
+	display: flex;
+}
+
+/*-----------*/
+
+
+
+
+/*Btn more services*/
+
+.btn__more-services {
+	display: flex;
+	margin-top: 20px;
+	a {
+		display: block;
+		padding: 20px 45px;
+		border: 2px dotted $link;
+		color: $link;
+		border-radius: 45px;
+		font-weight: 700;
+		font-size: 20px;
+		cursor: pointer;
+		&:hover {
+			background-color: $hover;
+			color: $white;
+			border-color: transparent;
+		}
+	}
+}
+
+/*-----------*/
+
+
+
+// SECTION END ==========
+
+

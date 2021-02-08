@@ -38,16 +38,16 @@ const modals = () => {
 			}
 		} )
 
-		function showModalByScroll() {
-			if (window.pageYOffset + document.documentElement.clientHeight >= document.documentElement.scrollHeight) {
-				if (modal.classList.contains('form__modal')) {
-					openModal();
-					window.removeEventListener('scroll', showModalByScroll);
-				}
-			}
-		}
+		// function showModalByScroll() {
+		// 	if (window.pageYOffset + document.documentElement.clientHeight >= document.documentElement.scrollHeight) {
+		// 		if (modal.classList.contains('form__modal')) {
+		// 			openModal();
+		// 			window.removeEventListener('scroll', showModalByScroll);
+		// 		}
+		// 	}
+		// }
 
-		window.addEventListener('scroll', showModalByScroll);
+		// window.addEventListener('scroll', showModalByScroll);
 
 		// function openTimer() {
 		// 	setTimeout(openModal, 2000);
@@ -63,6 +63,7 @@ const modals = () => {
 	bindModal('.call-modal__btn', '.form__modal', '.form-close');
 	bindModal('.burger__call-btn', '.form__modal', '.form-close');
 	bindModal('.btn-signup', '.form__modal', '.form-close');
+	bindModal('.footer__btn1', '.form__modal', '.form-close');
 
 	
 	var burgerCallBtn = document.querySelector('.burger__call-btn');

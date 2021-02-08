@@ -42,23 +42,22 @@ p, a {
 }
 
 a {
-	color: #014BF7;
+	color: $orange;	
 	text-decoration: none;
 	background-color: transparent;
 	transition-duration: 0.3s;
 }
 
 a:hover {
-	color: lighten($link, 25%);
+	color: lighten($orange, 25%);
 }
 
 a:not([href]) {
-	color: inherit;
+	// color: inherit;
 	text-decoration: none;
 }
 
 a:not([href]):hover {
-	color: inherit;
 	text-decoration: none;
 }
 
@@ -167,6 +166,9 @@ button:not(:disabled),
 		@include bp-480 {
 			font-size: 26px;
 		}
+		@include bp-320 {
+			font-size: 24px;
+		}
 	}
 }
 
@@ -220,3 +222,6 @@ button:not(:disabled),
 	}
 }
 
+.title--white {
+	color: $white;
+}

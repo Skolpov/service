@@ -90,6 +90,58 @@ im.mask(selector);
 
 
 
+// SLICK SLIDER
+
+$(document).ready(function(){
+	$('.brands__carousel').slick({
+		infinite: true,
+		slidesToShow: 7,
+		slidesToScroll: 1
+	});
+});
+
+$(document).ready(function(){
+	$('.team__carousel').slick({
+		infinite: true,
+		slidesToShow: 3,
+		slidesToScroll: 1
+	});
+});
+
+$(document).ready(function(){
+	$('.review__carousel').slick({
+		infinite: true,
+		slidesToShow: 1,
+		slidesToScroll: 1
+	});
+});
+
+
+
+
+// MORE CARDS SERVICES
+
+let moreCards = document.querySelector('.more__cards');
+let btnServices = document.querySelector('.btn__more-services');
+let btnNameServices = document.querySelector('.btn-services__name');
+
+
+btnServices.addEventListener('click', function() {
+	
+	if(!moreCards.classList.contains('display')) {
+		moreCards.classList.add('display');
+		btnNameServices.innerText="Скрыть все услуги";
+	} else {
+		moreCards.classList.remove('display');
+		btnNameServices.innerText="Показать все услуги";
+	}
+});
+
+// ==========
+
+
+
+
 window.addEventListener('DOMContentLoaded', () => {
 	modals();
 });

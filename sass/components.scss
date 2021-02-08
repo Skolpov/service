@@ -19,11 +19,10 @@
    	appearance:         none;
 	transition-property: background-color, border-color;
 	transition-duration: 500ms;
-	cursor: pointer;
 	background-color: $bg;
-	color: $white;
 	transition: all 0.3s ease;
 	outline: none;
+	cursor: pointer;
 	&:after {
 		background: lighten($btn, 25%);;
 		content: "";
@@ -39,7 +38,8 @@
 	@content;
 	&:hover {
 		background-color: lighten($btn, 5%);
-		box-shadow: 0px 2px 5px darken($btn, 30%);
+		color: $white;
+		// box-shadow: 0px 2px 5px darken($btn, 30%);
 		&:after {
 			left: 120%;
 			transition: all 550ms cubic-bezier(0.19, 1, 0.22, 1);
@@ -66,7 +66,7 @@
     background-color: #fff;
     background-clip: padding-box;
     transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
-	border: 1px solid $borderColor;
+	border: none;
 	border-radius: 55px;
 	box-shadow: none;
 	font-family: 'Open Sans', Roboto, sans-serif;
@@ -78,13 +78,12 @@
 	transition-property: background-color, border-color;
 	transition-duration: 500ms;
 	background-color: $bg;
-	color: $text;
 	cursor: text;
 	outline: none;
 	@content;
-	&:focus {
-		box-shadow: 0 0 0 1px rgba(224, 116, 47, 1);;
-	}
+	// &:focus {
+	// 	// box-shadow: 0 0 0 2px rgba(224, 116, 47, 1);
+	// }
 }
 
 .input__box {
@@ -102,6 +101,7 @@
 		height: 15px;
 		background-image: url('../img/contacts/user.png');
 		background-size: contain;
+		background-repeat: no-repeat;
 		z-index: 2;
 	}
 }
@@ -218,7 +218,11 @@
 		.form-btn {
 			margin-top: 10px;
 			button {
+				color: $white;
 				width: 100%;
+				@include bp-320 {
+					font-size: 14px;
+				}
 			}
 		}		
 	}
@@ -548,8 +552,8 @@
 	}
 }
 
-.call-btn {
-	// background: green;
+.burger__call-btn {
+	color: white;
 }
 
 .social {

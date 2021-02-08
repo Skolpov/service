@@ -2,6 +2,10 @@
 
 /*Main banner block*/
 
+.banner__container {
+	overflow: hidden;
+}
+
 .banner__wrap {
 	display: flex;
 	flex-direction: row;
@@ -10,11 +14,17 @@
 .banner__block {
 	display: flex;
 	flex-direction: column;
+	@include bp-1200 {
+		align-items: center;
+	}
 }
 
 .main__title {
-	width: 1000px;
+	max-width: 1000px;
 	margin-bottom: 0;
+	@include bp-1200 {
+		text-align: center;
+	}
 	h1 {
 		color: $white;
 		span {
@@ -25,9 +35,14 @@
 
 .advantages {
 	display: flex;
-	width: 740px;
+	max-width: 740px;
 	margin-top: 15px;
 	margin-bottom: 30px;
+	@include bp-640 {
+		flex-direction: column;
+		width: 100%;
+	}
+
 }
 
 .advantages__item {
@@ -42,12 +57,30 @@
 	p {
 		color: $white;
 	}
+
 }
 
-.banner__btns {
+.advantage--small {
+	max-width: 285px;
+	@include bp-640 {
+		max-width: 100%;
+	}
+}
+.advantage--big {
+	max-width: 370px;
+	@include bp-640 {
+		max-width: 100%;
+	}
+}
+
+.main__btns {
 	display: flex;
 	flex-direction: row;
 	align-items: center;
+	@include bp-480 {
+		flex-direction: column;
+		width: 100%;
+	}
 }
 
 .btn-signup {
@@ -61,21 +94,69 @@
 		position: absolute;
 		top: 18px;
 		left: 25px;
-		background-image: url('../img/interface/signup-arrow.svg');
+		background-image: url('../img/interface/ic-btn.png');
 		background-repeat: no-repeat;
 		background-size: contain;
 		content: '';
 		width: 25px;
 		height: 25px;
+		@include bp-480 {
+			top: 22px;
+		}
+	}
+	@include bp-480 {
+		width: 100%;
+		margin-right: 0;
+		margin-bottom: 20px;
+		font-size: 20px;
 	}
 }
 
 .btn-calc {
 	@include button(transparent, $orange);
 	font-size: 16px;
-	font-weight: 400;
+	font-weight: 700;
 	border: 2px solid $orange;
-	color: #fff !important;
+	padding: 16px 30px 16px 60px;
+	color: $white;
+	&:before {
+		position: absolute;
+		top: 16px;
+		left: 25px;
+		background-image: url('../img/interface/ic-calc.png');
+		background-repeat: no-repeat;
+		background-size: contain;
+		content: '';
+		width: 25px;
+		height: 25px;
+		@include bp-480 {
+			top: 22px;
+		}
+	}
+	
+	@include bp-480 {
+		width: 100%;
+	}
+		
+}
+
+
+.banner__image {
+	position: relative;
+	width: 100px;
+	height: 395px;
+	@include bp-1200 {
+		display: none;
+	}
+	img {
+		position: absolute;
+		// width: 650px;
+		width: 820px;
+		height: auto;
+		top: -50px;
+		right: -480px;
+
+	}
 }
 
 

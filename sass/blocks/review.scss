@@ -1,0 +1,135 @@
+//REVIEW
+
+.review__wrap {
+	margin-bottom: 20px;
+}
+
+.review__container {
+	position: relative;
+
+}
+
+.review__block {
+	position: absolute;
+	background: $white;
+	border-radius: 15px;
+	top: -240px;
+	left: 0;
+	right: 0;
+	margin: auto;
+	box-shadow: 0 10px 45px rgba(209, 203, 223, 0.5);
+
+}
+
+.review__block2 {
+	margin: 15px;
+	border-radius: 15px;
+	box-shadow: 0 10px 45px rgba(209, 203, 223, 0.5);
+	.h2__title {
+		margin-left: 30px;
+		padding-top: 30px; 
+		margin-right: 30px;
+		margin-bottom: 20px;
+	}
+}
+
+/*Slick slider*/
+
+.review__carousel {
+	position: relative;
+	.slick-arrow {
+		position: absolute;
+		top: -55px;
+		right: 0;
+		width: 35px;
+		height: 35px;
+		padding: 0;
+		margin: 0;
+		z-index: 5;
+		font-size: 0;
+		border: 2px solid #BCB8C4;
+		&:hover {
+			box-shadow: none;
+		}
+	}
+	.slick-prev {
+		right: 70px;
+		background: url('../img/interface/dark-arrow.svg') 13px 7px / 30% no-repeat;
+		transform: rotate(180deg);
+	}
+	.slick-next {
+		right: 30px;
+		background: url('../img/interface/dark-arrow.svg') 12px 8px / 30% no-repeat;
+	}
+}
+
+
+/*-----------*/
+
+
+/*Review box*/
+
+.review__box {
+	display: flex;
+	flex-direction: row;
+	align-items: flex-start;
+
+}
+
+.review__text {
+	margin: 30px;
+	flex: 2;
+	p {
+		font-size: 16px;
+		font-weight: 500;
+	}
+}
+
+.review__human {
+	flex: 1;
+	margin: 30px;
+}
+
+.human__block {
+	display: flex;
+	flex-direction: column;
+}
+
+.human__description {
+	display: flex;
+	flex-direction: row;
+	margin-bottom: 10px;
+}
+
+.human__avatar {
+	img {
+		margin-right: 15px;
+	}
+}
+
+.human__text {
+	display: flex;
+	flex-direction: column;
+
+	p {
+		font-weight: bold;
+	}
+	span {
+		color: #9a95ad;
+	}
+	.car-name {
+		margin-top: 2px;
+		margin-bottom: 2px;
+	}
+	.time-work {
+		font-size: 13px;
+	}
+}
+
+
+/*-----------*/
+
+
+// SECTION END ==========
+
+
