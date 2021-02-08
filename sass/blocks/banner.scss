@@ -1,0 +1,96 @@
+//BANNER
+
+/*Main banner block*/
+
+.banner__wrap {
+	display: flex;
+	flex-direction: row;
+}
+
+.banner__block {
+	display: flex;
+	flex-direction: column;
+}
+
+.main__title {
+	width: 1000px;
+	margin-bottom: 0;
+	h1 {
+		color: $white;
+		span {
+			color: $orange;
+		}
+	}
+}
+
+.advantages {
+	display: flex;
+	width: 740px;
+	margin-top: 15px;
+	margin-bottom: 30px;
+}
+
+.advantages__item {
+	display: flex;
+	align-items: center;
+	padding: 10px;
+	img {
+		width: 25px;
+		height: 25px;
+		margin-right: 15px;
+	}
+	p {
+		color: $white;
+	}
+}
+
+.banner__btns {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+
+.btn-signup {
+	@include button($orange, transparent);
+	position: relative;
+	color: $white !important;
+	margin-right: 20px;
+	width: 220px;
+	padding-right: 10px;
+	&:before {
+		position: absolute;
+		top: 18px;
+		left: 25px;
+		background-image: url('../img/interface/signup-arrow.svg');
+		background-repeat: no-repeat;
+		background-size: contain;
+		content: '';
+		width: 25px;
+		height: 25px;
+	}
+}
+
+.btn-calc {
+	@include button(transparent, $orange);
+	font-size: 16px;
+	font-weight: 400;
+	border: 2px solid $orange;
+	color: #fff !important;
+}
+
+
+
+
+/*-----------*/
+
+
+/*Name block*/
+
+
+
+/*-----------*/
+
+
+// SECTION END ==========
+
+

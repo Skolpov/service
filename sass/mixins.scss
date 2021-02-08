@@ -1,0 +1,140 @@
+
+@mixin min-max($min-width, $max-width, $padding) {
+	min-width: $min-width;
+	max-width: $max-width;
+	padding: 0 $padding;
+	box-sizing: border-box;
+	margin: 0 auto;
+}
+
+
+
+
+@mixin adaptive-video() {
+	position: relative;
+	padding-bottom: 56.25%; /* задаёт высоту контейнера для 16:9 (если 4:3 — поставьте 75%) */
+	padding-top: 30px;
+	height: 0;
+	overflow: hidden;
+	iframe {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+	}
+}
+
+
+
+
+@mixin visually-hidden() {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0,0,0,0);
+  overflow: hidden;
+}
+
+
+
+
+// @function strip-unit($value) {
+// 	@return $value / ($value * 0 + 1);
+// }
+  
+// @mixin fluid-type($min-vw, $max-vw, $min-font-size, $max-font-size) {
+// 	$u1: unit($min-vw);
+// 	$u2: unit($max-vw);
+// 	$u3: unit($min-font-size);
+// 	$u4: unit($max-font-size);
+  
+// 	@if $u1 == $u2 and $u1 == $u3 and $u1 == $u4 {
+// 		& {
+// 			font-size: $min-font-size;
+// 			@media screen and (min-width: $min-vw) {
+// 				font-size: calc(#{$min-font-size} + #{strip-unit($max-font-size - $min-font-size)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)}));
+// 			}
+// 			@media screen and (min-width: $max-vw) {
+// 				font-size: $max-font-size;
+// 			}
+// 		}
+// 	}
+// }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// ADAPTIVE
+
+@mixin bp-1400 {
+	@media only screen and (max-width: 1400px) {
+		@content;
+	}
+}
+  
+@mixin bp-1200 {
+	@media only screen and (max-width: 1200px) {
+		@content;
+	}
+}
+	
+@mixin bp-992 {
+	@media only screen and (max-width: 992px) {
+		@content;
+	}
+}
+
+@mixin bp-768 {
+	@media only screen and (max-width: 768px) {
+		@content;
+	}
+}
+
+@mixin bp-640 {
+	@media only screen and (max-width: 640px) {
+		@content;
+	}
+}
+
+@mixin bp-480 {
+	@media only screen and (max-width: 480px) {
+		@content;
+	}
+}
+
+@mixin bp-380 {
+	@media only screen and (max-width: 380px) {
+		@content;
+	}
+}
+
+@mixin bp-320 {
+	@media only screen and (max-width: 320px) {
+		@content;
+	}
+}

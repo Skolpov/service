@@ -1,0 +1,709 @@
+
+// MAIN BUTTON
+
+@mixin button($bg: $first, $borderColor: $second) {
+	display: inline-block;
+	overflow: hidden;
+	position: relative;
+	padding: 16px 40px;
+	border: 8px solid #77413E;
+	border-radius: 50px;
+	box-shadow: none;
+	font-family: 'Open Sans', Roboto, sans-serif;
+	font-size: 16px;
+	font-weight: 700;
+	vertical-align: middle;
+	text-align: center;
+	-webkit-appearance: none;
+   	-moz-appearance:    none;
+   	appearance:         none;
+	transition-property: background-color, border-color;
+	transition-duration: 500ms;
+	cursor: pointer;
+	background-color: $bg;
+	color: $white;
+	transition: all 0.3s ease;
+	outline: none;
+	&:after {
+		background: lighten($btn, 25%);;
+		content: "";
+		height: 155px;
+		left: -75px;
+		opacity: 0.2;
+		position: absolute;
+		top: -50px;
+		transform: rotate(35deg);
+		transition: all 550ms cubic-bezier(0.19, 1, 0.22, 1);
+		width: 50px;
+	  }
+	@content;
+	&:hover {
+		background-color: lighten($btn, 5%);
+		box-shadow: 0px 2px 5px darken($btn, 30%);
+		&:after {
+			left: 120%;
+			transition: all 550ms cubic-bezier(0.19, 1, 0.22, 1);
+		}
+	}
+	&:active {
+		background-color: darken($btn, 5%);
+	}
+}
+
+////////////////////
+
+
+
+
+// MAIN INPUT
+
+@mixin input($bg: $first, $borderColor: $second) {
+	position: relative;
+    width: 100%;
+	padding: 14px 20px 14px 50px;
+	margin: 5px 0;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+	border: 1px solid $borderColor;
+	border-radius: 55px;
+	box-shadow: none;
+	font-family: 'Open Sans', Roboto, sans-serif;
+	font-size: 13px;
+	vertical-align: middle;
+	-webkit-appearance: none;
+   	-moz-appearance:    none;
+   	appearance:         none;
+	transition-property: background-color, border-color;
+	transition-duration: 500ms;
+	background-color: $bg;
+	color: $text;
+	cursor: text;
+	outline: none;
+	@content;
+	&:focus {
+		box-shadow: 0 0 0 1px rgba(224, 116, 47, 1);;
+	}
+}
+
+.input__box {
+	position: relative;
+
+}
+
+.input-name {
+	&:before {
+		content: '';
+		position: absolute;
+		top: 22px;
+		left: 18px;
+		width: 15px;
+		height: 15px;
+		background-image: url('../img/contacts/user.png');
+		background-size: contain;
+		z-index: 2;
+	}
+}
+
+.input-phone {
+	&:before {
+		content: '';
+		position: absolute;
+		top: 22px;
+		left: 19px;
+		width: 15px;
+		height: 15px;
+		background-image: url('../img/contacts/phone.png');
+		background-size: contain;
+		background-position-x: 3px;
+		background-repeat: no-repeat;
+		z-index: 2;
+	}
+}
+
+.input-mail {
+	&:before {
+		content: '';
+		position: absolute;
+		top: 22px;
+		left: 18px;
+		width: 15px;
+		height: 15px;
+		background-image: url('../img/contacts/mail.png');
+		background-size: contain;
+		background-position-y: 2px;
+		background-repeat: no-repeat;
+		z-index: 2;
+	}
+}
+
+////////////////////
+
+
+
+
+// CHECKBOX
+
+.checkbox {
+	label {
+		cursor: pointer;
+	}
+	
+	input[type="checkbox"] {
+		display: none;
+	}
+
+	.label-text {
+		margin-top: 15px;
+		display: flex;
+		align-items: center;
+		position: relative;
+		font-size: 11px;
+		text-align: left;
+		span {
+			line-height: 1.4;
+			color: #baaad4;
+		}
+	}
+	
+	.label-text:before {
+		content: '';
+		display: inline-block;
+		left: -30px;
+		width: 18px;
+		height: 18px;
+		border-radius: 3px;
+		border: 1px solid #b3bbc4;
+		margin-right: 10px;
+	}
+	
+	input[type="checkbox"]:checked + .label-text:before {
+		background-image: url('../img/interface/form-check.svg');
+		background-color: $orange;
+		background-position-x: 2px;
+		background-position-y: 4px;
+		background-repeat: no-repeat;
+		border: none;
+	}
+}
+
+////////////////////
+
+
+
+
+// MODAL
+
+.call-form {
+	max-width: 360px !important;
+	text-align: center;
+
+	.modal-title {
+		margin-bottom: 5px;
+		h2 {
+			color: $white;
+		}
+	}
+
+	.modal-text {
+		margin-bottom: 15px;
+		p {
+			font-size: 14px;
+			color: $white;
+		}
+	}
+
+	.modal-form {
+		.form-btn {
+			margin-top: 10px;
+			button {
+				width: 100%;
+			}
+		}		
+	}
+
+
+}
+
+.modal--show {
+	display: flex !important;
+}
+.modal--hide {
+	display: none;
+}
+
+.modal__block {
+	position: fixed;
+	top: 0;
+	display: none;
+	justify-content: center;
+	align-items: center;
+	z-index: 10000;
+	width: 100%;
+	height: 100%;
+	background: rgba(16, 8, 32, 0.9);
+}
+
+.modal-content {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	width: 600px;
+	height: auto;
+	padding: 60px 35px;
+	margin-left: 15px;
+	margin-right: 15px;
+	background-color: $main-color;
+	border-radius: 10px;
+	@include bp-320 {
+		padding: 60px 25px;
+	}
+}
+
+.modal-title {
+	margin-bottom: 20px;
+}
+
+.modal-close {
+	position: absolute;
+	top: 15px;
+	right: 15px;
+	width: 30px;
+	height: 30px;
+	opacity: 0.3;
+	cursor: pointer;
+	img {
+		width: 30px;
+		height: 30px;
+	}
+	transition-duration: 0.3s;
+	&:hover {
+		opacity: 1;
+	}
+}
+
+
+
+.animate__animated.animate__fadeIn {
+	--animate-duration: 0.2s;
+}
+
+////////////////////
+
+
+
+
+// BTN UP
+
+.btn-up {
+	position: fixed;
+	right: 15px;
+	bottom: 30px;
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	background-color: $main-color;
+	cursor: pointer;
+	svg {
+		fill: $main-color;
+		transition-duration: 0.3s;
+		&:hover {
+			fill: lighten($main-color, 15%);
+		}
+	}
+	
+}
+
+////////////////////
+
+
+
+
+// HAMBURGER MENU BUTTON
+
+.menu-btn__block {
+	padding: 15px;
+	height: auto;
+	box-sizing: border-box;
+}
+
+.menu-btn {
+	position: relative;
+	display: block;
+	top: 1px;
+	width: 25px;
+	height: 22px;
+	-webkit-transform: rotate(0deg);
+	-moz-transform: rotate(0deg);
+	-o-transform: rotate(0deg);
+	transform: rotate(0deg);
+	-webkit-transition: .5s ease-in-out;
+	-moz-transition: .5s ease-in-out;
+	-o-transition: .5s ease-in-out;
+	transition: .5s ease-in-out;
+	cursor: pointer;
+	// @include bp-768 {
+	// 	display: block;
+	// }
+}
+  
+.menu-btn span {
+	display: block;
+	position: absolute;
+	height: 2px;
+	width: 100%;
+	background: $white;
+	border-radius: 10px;
+	opacity: 1;
+	left: 0;
+	-webkit-transform: rotate(0deg);
+	-moz-transform: rotate(0deg);
+	-o-transform: rotate(0deg);
+	transform: rotate(0deg);
+	-webkit-transition: .15s ease-in-out;
+	-moz-transition: .15s ease-in-out;
+	-o-transition: .15s ease-in-out;
+	transition: .15s ease-in-out;
+}
+  
+.menu-btn span:nth-child(1) {
+	top: 0px;
+}
+  
+.menu-btn span:nth-child(2),.menu-btn span:nth-child(3) {
+	top: 10px;
+}
+  
+.menu-btn span:nth-child(4) {
+	top: 20px;
+}
+  
+.menu-btn.open span:nth-child(1) {
+	top: 18px;
+	width: 0%;
+	left: 50%;
+}
+  
+.menu-btn.open span:nth-child(2) {
+	-webkit-transform: rotate(45deg);
+	-moz-transform: rotate(45deg);
+	-o-transform: rotate(45deg);
+	transform: rotate(45deg);
+}
+  
+.menu-btn.open span:nth-child(3) {
+	-webkit-transform: rotate(-45deg);
+	-moz-transform: rotate(-45deg);
+	-o-transform: rotate(-45deg);
+	transform: rotate(-45deg);
+}
+  
+.menu-btn.open span:nth-child(4) {
+	top: 18px;
+	width: 0%;
+	left: 50%;
+}
+
+////////////////////
+
+
+
+
+
+// HAMBURGER MENU
+
+@mixin transform($transform) {
+	-webkit-transform: $transform;
+	   -moz-transform: $transform;
+		-ms-transform: $transform;
+		 -o-transform: $transform;
+			transform: $transform;
+}
+  
+@mixin transition($transition) {
+	-webkit-transition: #{$transition};
+	   -moz-transition: #{$transition};
+		 -o-transition: #{$transition};
+			transition: #{$transition};
+}
+  
+@mixin transition-delay($transition-delay) {
+	-webkit-transition-delay: #{$transition-delay};
+	   -moz-transition-delay: #{$transition-delay};
+		 -o-transition-delay: #{$transition-delay};
+			transition-delay: #{$transition-delay};
+}
+
+.burger__block {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	background-color: $main-color;
+	position: fixed;
+	z-index: 80 !important;
+	top: 0;
+	right: 0;
+	height: 100%;
+	max-width: 460px;
+	width: 100%;
+	padding: 0;
+	overflow-y: auto;
+	@include transform(translateX(100%));
+	@include transition(transform .2s cubic-bezier(0.785, 0.135, 0.15, 0.86));
+	@include bp-768 {
+		max-width: 100%;
+	}
+	@include bp-480 {
+		padding: 0 0 40px 0;
+	}
+	&.show {
+	  @include transform(translateX(0px));
+		// .burger-menu__items {
+		// 	padding-left: 0;
+		// 	li {
+		// 		@include transform(translateX(0px));
+		// 		opacity: 1;
+				
+		// 		@for $i from 1 to 10 { 
+		// 		&:nth-child(#{$i}) {
+		// 			transition-delay: $i * 0.05s;
+		// 		}
+		// 		}
+		// 	}
+		// }
+
+	}
+
+}
+
+
+.close-burger {
+	cursor: pointer;
+	padding: 19px 55px;
+	@include transition(all .2s ease);
+	border-bottom: 1px solid $line;
+	color: $white;
+	p {
+		font-size: 14px;
+		transition-duration: 0.3s;
+	}
+	img {
+		width: 10px;
+		opacity: 0.5;
+		transform: rotate(360deg);
+		margin-right: 8px;
+	}
+	&:hover {
+		color: $main-color;
+		background-color: lighten($main-color, 48%);
+	}
+	@include bp-768 {
+		text-align: center;
+	}
+}
+ 
+.burger-menu__items {
+	a {
+		color: $white;
+		text-decoration: none;
+		border: none;
+		font-size: 1.4rem;
+		display: block;
+		text-transform: uppercase;
+		font-weight: 700;
+		// padding: 10px 55px;
+		padding-left: 55px;
+		padding-right: 55px;
+		padding-top: 3vh;
+		padding-bottom: 3vh;
+		border-bottom: 1px solid $line;
+		
+		@include transition(all .3s ease);
+		@include bp-768 {
+			text-align: center;
+		}
+		@include bp-480 {
+			font-size: 1.2rem;
+		}
+		&:hover {
+			color: $main-color;
+			background-color: lighten($main-color, 48%);
+
+		}
+	}
+	
+		
+	//   }
+}
+
+.burger__contacts {
+	// background:red;
+	padding-left: 55px;
+	margin-top: 50px;
+
+	@include bp-768 {
+		text-align: center;
+		padding-left: 0;
+	}
+}
+
+.call-btn {
+	// background: green;
+}
+
+.social {
+	// background: yellow;
+	margin-top: 40px;
+	margin-bottom: 40px;
+	@include transition(all .15s ease);
+	a {
+		display: inline-block;
+		width: 30px;
+		height: 30px;
+		margin-right: 25px;
+		transition: 0.3s ease-in-out;
+		&:last-of-type {
+			margin-right: 0px;
+		}
+		img {
+			width: 30px;
+			height: 30px;
+		}
+		&:hover {
+			
+		}
+	  }
+}
+
+.overlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height:100%;
+	@include transition(all 0.3s ease-in-out);
+	background-color: $black;
+	opacity: 0;
+	visibility: hidden;
+	&.show {
+		opacity: 0.8;
+		visibility: visible;
+	}
+	z-index: 60;
+}
+
+////////////////////
+
+
+
+
+// SLIDER
+
+.slider {
+	overflow: hidden;
+}
+
+.slider figure {
+	position: relative;
+	width: 4000px;
+	margin: 0;
+	left: 0;
+	animation: 20s slider infinite;
+	img {
+		width: 1000px;
+	}
+}
+
+@keyframes slider {
+	0% {
+		left: 0;
+	}
+	20% {
+		left: 0;
+	}
+	25% {
+		left: -200%;
+	}
+}
+
+////////////////////
+
+
+
+
+
+// SELECT
+
+.custom-select {
+	position: relative;
+	margin: 5px 0;
+}
+  
+.custom-select select {
+	display: none; 
+}
+  
+.select-selected {
+	background-color: #fff;
+	border: 1px solid #CED4DA !important;	
+	border-radius: 5px !important;
+}
+  
+.select-selected:after {
+	position: absolute;
+	content: "";
+	top: 16px;
+	right: 15px;
+	width: 0;
+	height: 0;
+	border: 6px solid transparent;
+	border-color: #CED4DA transparent transparent transparent;
+}
+  
+.select-selected.select-arrow-active:after {
+	border-color: transparent transparent #CED4DA transparent;
+	top: 10px;
+}
+  
+.select-items div,.select-selected {
+	padding: 8px 16px;
+	border-left: 1px solid #CED4DA;
+	border-right: 1px solid #CED4DA;
+	border-radius: none;
+	transition-duration: 0.3s;
+	cursor: pointer;
+}
+  
+.select-items {
+	position: absolute;
+	background-color: #fff;
+	top: 45px;
+	left: 0;
+	right: 0;
+	z-index: 5;
+}
+
+.select-items {
+	& div:first-child {
+		border-top-left-radius: 5px;
+		border-top-right-radius: 5px;
+		border-top: 1px solid #CED4DA;
+	}
+	& div:last-child {
+		border-bottom-left-radius: 5px;
+		border-bottom-right-radius: 5px;
+		border-bottom: 1px solid #CED4DA;
+	}
+}
+  
+.select-hide {
+	display: none;
+}
+  
+.select-items div:hover, .same-as-selected {
+	background-color: #004BF7;
+	color: $white;
+}
+
+////////////////////
