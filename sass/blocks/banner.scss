@@ -133,9 +133,7 @@
 		content: '';
 		width: 25px;
 		height: 25px;
-		@include bp-480 {
-			top: 22px;
-		}
+
 	}
 	
 	@include bp-480 {

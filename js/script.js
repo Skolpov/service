@@ -158,7 +158,30 @@ $(document).ready(function(){
 	$('.team__carousel').slick({
 		infinite: true,
 		slidesToShow: 3,
-		slidesToScroll: 1
+		slidesToScroll: 1,
+		responsive: [
+			{
+			  breakpoint: 1200,
+			  settings: {
+				slidesToShow: 3,
+				slidesToScroll: 1
+			  }
+			},
+			{
+				breakpoint: 700,
+				settings: {
+				  slidesToShow: 2,
+				  slidesToScroll: 1
+				}
+			  },
+			{
+			  breakpoint: 480,
+			  settings: {
+				slidesToShow: 1,
+				slidesToScroll: 1
+			  }
+			}
+		  ]
 	});
 });
 
