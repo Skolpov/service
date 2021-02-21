@@ -9,6 +9,10 @@
 .banner__wrap {
 	display: flex;
 	flex-direction: row;
+	@include bp-1200 {
+		justify-content: center;
+	}
+	
 }
 
 .banner__block {

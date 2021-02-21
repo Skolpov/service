@@ -96,7 +96,61 @@ $(document).ready(function(){
 	$('.brands__carousel').slick({
 		infinite: true,
 		slidesToShow: 7,
-		slidesToScroll: 1
+		slidesToScroll: 1,
+		responsive: [
+			{
+			  breakpoint: 1200,
+			  settings: {
+				slidesToShow: 5,
+				slidesToScroll: 1
+			  }
+			},
+			{
+			  breakpoint: 800,
+			  settings: {
+				slidesToShow: 3,
+				slidesToScroll: 1
+			  }
+			},
+			{
+			  breakpoint: 480,
+			  settings: {
+				slidesToShow: 2,
+				slidesToScroll: 1
+			  }
+			}
+		  ]
+	});
+});
+
+$(document).ready(function(){
+	$('.services__carousel').slick({
+		infinite: true,
+		slidesToShow: 3,
+		slidesToScroll: 1,
+		responsive: [
+			{
+			  breakpoint: 1200,
+			  settings: {
+				slidesToShow: 3,
+				slidesToScroll: 1
+			  }
+			},
+			{
+			  breakpoint: 660,
+			  settings: {
+				slidesToShow: 2,
+				slidesToScroll: 1
+			  }
+			},
+			{
+			  breakpoint: 480,
+			  settings: {
+				slidesToShow: 1,
+				slidesToScroll: 1
+			  }
+			}
+		  ]
 	});
 });
 
@@ -115,6 +169,7 @@ $(document).ready(function(){
 		slidesToScroll: 1
 	});
 });
+
 
 
 
