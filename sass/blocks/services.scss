@@ -4,10 +4,10 @@
 	margin-top: 0;
 	margin-bottom: 80px;
 	@include bp-768 {
-		padding-bottom: 40px;
+		margin-bottom: 40px;
 	}
 	@include bp-480 {
-		padding-bottom: 20px;
+		margin-bottom: 20px;
 	}
 }
 

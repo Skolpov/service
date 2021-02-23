@@ -3,3 +3,6 @@ node_modules
 
 # production
 build
+
+# git link for folder build
+git-build

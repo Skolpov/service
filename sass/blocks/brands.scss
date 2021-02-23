@@ -3,19 +3,25 @@
 
 /*Name block*/
 
-.brands__carousel {
+.brands__container {
 	position: relative;
 	display: flex;
 	flex-direction: row;
 	align-items: center;
+	flex-wrap: wrap;
 	justify-content: center;
 	box-sizing: border-box;
+
 }
 
 .brands__box {
 	display: flex;
 	flex-direction: row;
 	justify-content: center;
+	margin: 15px;
+	width: 90px;
+	height: 90px;
+
 }
 
 
@@ -34,9 +40,6 @@
 
 
 
-/*Slick slider*/
-
-
 
 .slick-track {
 	display: flex;
@@ -46,29 +49,29 @@
 	overflow: hidden;
 }
 
-.brands__carousel {
-	.slick-arrow {
-		position: absolute;
-		top: 40%;
-		width: 35px;
-		height: 35px;
-		padding: 0;
-		margin: 0;
-		z-index: 5;
-		font-size: 0;
-		background: none;
-		border: 2px solid $white;
-	}
-	.slick-prev {
-		left: 0;
-		background: url('../img/interface/white-arrow.svg') 12px 8px / 30% no-repeat;
-		transform: rotate(180deg);
-	}
-	.slick-next {
-		right: 0;
-		background: url('../img/interface/white-arrow.svg') 12px 8px / 30% no-repeat;
-	}
-}
+// .brands__carousel {
+// 	.slick-arrow {
+// 		position: absolute;
+// 		top: 40%;
+// 		width: 35px;
+// 		height: 35px;
+// 		padding: 0;
+// 		margin: 0;
+// 		z-index: 5;
+// 		font-size: 0;
+// 		background: none;
+// 		border: 2px solid $white;
+// 	}
+// 	.slick-prev {
+// 		left: 0;
+// 		background: url('../img/interface/white-arrow.svg') 12px 8px / 30% no-repeat;
+// 		transform: rotate(180deg);
+// 	}
+// 	.slick-next {
+// 		right: 0;
+// 		background: url('../img/interface/white-arrow.svg') 12px 8px / 30% no-repeat;
+// 	}
+// }
 
 /*-----------*/
 
