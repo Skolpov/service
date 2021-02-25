@@ -2,33 +2,34 @@
   "name": "project",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "index.html",
   "scripts": {
-    "build": "gulp build",
-    "start": "npm run build && gulp serve"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": "Skolpov",
   "license": "ISC",
   "devDependencies": {
-    "@babel/core": "^7.12.16",
-    "@babel/preset-env": "^7.12.16",
+    "@babel/core": "^7.13.1",
+    "@babel/preset-env": "^7.13.5",
     "browser-sync": "^2.26.14",
     "del": "^6.0.0",
     "gulp": "^4.0.2",
-    "gulp-autoprefixer": "~7.0.1",
+    "gulp-autoprefixer": "^7.0.1",
     "gulp-babel": "^8.0.0",
-    "gulp-concat": "^2.6.1",
-    "gulp-csso": "^4.0.1",
-    "gulp-load-plugins": "^2.0.6",
-    "gulp-plumber": "^1.2.1",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-file-include": "^2.3.0",
+    "gulp-fonter": "^0.3.0",
+    "gulp-group-css-media-queries": "^1.2.2",
+    "gulp-imagemin": "^7.1.0",
     "gulp-rename": "^2.0.0",
-    "gulp-replace": "^1.0.0",
     "gulp-sass": "^4.1.0",
-    "gulp-sourcemaps": "^3.0.0"
-  },
-  "dependencies": {
-    "@splidejs/splide": "^2.4.21",
-    "gulp-cli": "^2.3.0",
-    "npm-check-updates": "^11.1.4"
+    "gulp-svg-sprite": "^1.5.0",
+    "gulp-ttf2woff": "^1.1.1",
+    "gulp-ttf2woff2": "^4.0.1",
+    "gulp-uglify-es": "^2.0.0",
+    "gulp-webp": "^4.0.1",
+    "gulp-webp-html": "^1.0.2",
+    "lazysizes": "^5.3.0",
+    "npm-check-updates": "^11.1.9"
   }
 }
